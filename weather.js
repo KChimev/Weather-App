@@ -46,7 +46,7 @@ function ParseCurrentWeather({current_weather,daily}) {
 function ParseDailyWeather({daily}){
     return daily.time.map((time,index)=>{
         return {
-            timeStamp:time*1000,
+            timestamp:time*1000,
             iconCode:daily.weathercode[index],
             maxTemp:Math.round(daily.temperature_2m_max[index]),
         }
